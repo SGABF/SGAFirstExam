@@ -13,6 +13,7 @@
 <script type="text/javascript">
 	check = 0;
 	
+	//신장과 체중쪽에 왔다갔다하면서 버튼이 입력되게 하는 스크립트
 	function ClickNum(btnVal){
 		if(check == 0){
 			document.getElementById("heightbar").value += btnVal;
@@ -21,6 +22,7 @@
 		}
 	}
 	
+	//신장과 체중 버튼 위치가 계속 변경되는 스크립트
 	function ChangeMode(){
 		if(check == 0){
 			check = 1
@@ -29,6 +31,7 @@
 		}
 	}
 	
+	//전체 삭제
 	function Clear(){
 		document.getElementById("heightbar").value = "";
 		document.getElementById("weightbar").value = "";
@@ -45,8 +48,8 @@
 			<tr>
 				<td>
 					성별 : 
-					<input type="radio" value="남자" id="man" name="gender">남자 &nbsp;
-					<input type="radio" value="여자" id="woman" name="gender">여자
+					<input type="radio" value="man" id="gender" name="gender" checked="checked">남자 &nbsp;
+					<input type="radio" value="woman" id="gender" name="gender">여자
 				</td>
 			</tr>
 			<tr>
