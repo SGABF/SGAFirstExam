@@ -7,7 +7,7 @@
 <title>SearchBar</title>
 </head>
 <body>
-	<form action="searchBarAction.jsp" method="POST">
+	<form action="${pageContext.request.contextPath}/Search/searchBarAction.jsp" method="POST">
 		검색 창 : <input type="text" id="searchBar" name="searchBar"> <br />
 		<hr/>
 		<input type="radio" value="naver" id="searchEngine" name="searchEngine" checked="checked">naver

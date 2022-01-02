@@ -40,13 +40,13 @@
 </script>
 </head>
 <body>
-	<form action="BmiResult.jsp" method="post">
+	<form action="${pageContext.request.contextPath}/Calc/BmiResult.jsp" method="post">
 		<table>
 			<tr>
 				<td colspan="4" style="text-align: center">BMI 계산기</td>
 			</tr>
 			<tr>
-				<td>
+				<td colspan="4" style="vertical-align: middle; text-align: center;">
 					성별 : 
 					<input type="radio" value="man" id="gender" name="gender" checked="checked">남자 &nbsp;
 					<input type="radio" value="woman" id="gender" name="gender">여자
