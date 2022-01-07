@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>BMI 결과창</title>
+
 </head>
 <body>
 <%
@@ -20,7 +21,8 @@
 	성별 : <%= gender %><br />
 	신장 : <%= height %><br />
 	체중 : <%= weight %><br />
-	연산 되나 확인 : <%= height + weight %>
+	연산 되나 확인 : <%= height + weight %><br />
+
 	
 	
 </body>
