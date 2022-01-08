@@ -1,3 +1,4 @@
+<%@page import="sga.calc.CalcVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +11,18 @@
 		width: 200px;
 	}
 </style>
+<%
+CalcVO ff = new CalcVO();
+
+
+out.print(ff.getclac(23.3));
+
+
+
+
+
+
+%>
 <script type="text/javascript">
 	check = 0;
 	
@@ -36,6 +49,31 @@
 		document.getElementById("heightbar").value = "";
 		document.getElementById("weightbar").value = "";
 	}
+	
+	function getBMI(result){
+//      hp = 0;
+//      result = document.getElementById("weightbar").value / (document.getElementById("heightbar").value*document.getElementById("heightbar").value);
+     hp = document.getElementById("heightbar").value/100;
+     result = Math.floor((document.getElementById("weightbar").value/(hp * hp))*10)/10;
+     
+     
+     
+     
+     if (result>=25) { 
+        // BMI수치가 25보다 크다면
+        alert("BMI지수는 " + result + "이며\n비만도 결과는 비만입니다.");
+        // BMI수치가 23보다 크다면
+     }else if (result>=23) {
+        alert("BMI지수는 " + result + "이며\n비만도 결과는 과체중입니다.");
+        // BMI수치가 18.5보다 크다면
+     }else if (result>=18.5) {
+        alert("BMI지수는 " + result + "이며\n비만도 결과는 정상입니다.");
+        // BMI수치가 그 나머지 값이라면
+     }else {
+        alert("BMI지수는 " + result + "이며\n비만도 결과는 저체중입니다.");
+     }
+     alert(result);
+  }
 
 </script>
 </head>
@@ -84,7 +122,7 @@
 			<tr>
 				<td><input type="button" value="타겟 변경" id="target" name="target" onclick="ChangeMode()"/></td>
 				<td><input type="button" value="0" id="0" name="0" onClick="ClickNum(this.id)"/></td>
-				<td><input type="submit" value="결과 전송" id="result" name="result"/></td>
+				<td><input type="button" value="결과 확인" id="result" name="result" onclick="getBMI()"/></td>
 			</tr>
 		</table>
 	</form>
