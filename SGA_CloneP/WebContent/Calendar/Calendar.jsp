@@ -13,6 +13,7 @@
 	td { border: 1px solid gray; width: 100px;padding: 10px; height: 80px; line-height: 30px; 
 	     border-radius: 20px; text-align: right; vertical-align: bottom; }
 	img:hover { cursor: pointer; }
+	
 </style>
 </head>
 <body>
@@ -54,6 +55,9 @@
 		LocalDate date2 = date.plusDays(date.lengthOfMonth()-1);
 		int lastDay = date2.getDayOfMonth();
 		
+		//3. 지난달의 마지막 날짜 구하기
+		LocalDate 
+		
 		
 		// out.println(dayOfWeekNumber + ", " + lastDay);
 	%>
@@ -82,8 +86,18 @@
 		<tr>
 			<%
 				// 1일의 요일 위치를 맞추기 위해서 공백 셀을 출력한다.
+				int dayCount = 1;
 				for(int i=0;i<dayOfWeekNumber;i++){
-					out.println("<td>&nbsp;</td>");
+					dayCount++;
+				}
+				
+				//int lastMonth = month-1;
+				//if(lastMonth==0) lastMonth = 12;
+				//int lengthOfLastMonth = lastMonth.lengthOfMonth()-1;
+				
+				for(int i=0;i<dayOfWeekNumber;i++){
+					
+					out.println("<td>"+dayCount+"</td>");
 				}
 				// 1일 부터 마자막 날짜까자 출력해보자
 				for(int i=1;i<=lastDay;i++){
@@ -108,8 +122,12 @@
 				}
 				// 마지막 줄을 마무리 해보자
 				if(dayOfWeekNumber<6){ // 마지막칸(토요일)까지 출력되지 않았다면 
+				int nextMonthDay = 1;
+						month += 1;
 					for(int i=dayOfWeekNumber+1;i<=6;i++){
-						out.println("<td>&nbsp;</td>");
+						if(month==13)month=1;
+						out.println("<td  style='opacity:0.5; font-color:'gray' >"+ month + " / "+ nextMonthDay + "</td>");
+						nextMonthDay++;
 					}
 				}
 			%>
