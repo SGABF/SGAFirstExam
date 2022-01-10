@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+td {
+	font-family: 'Gowun Batang', serif;
+	
+}
+
+input[type="button"]{
+	width:100px;
+	height:80px;
+}
