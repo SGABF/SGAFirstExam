@@ -137,11 +137,7 @@ request.setCharacterEncoding("UTF-8");
 					}
 			});
 	});
-	
-	function PopupMaker(){
-	alert("이수진\n정한결\n최동오");
-	return false;}
-	
+
 	function Check() {
 	      var value = $("#heightbar").val();
 	      var value2 = $("#weightbar").val();
@@ -229,7 +225,7 @@ request.setCharacterEncoding("UTF-8");
                <input type="button" value="3" id="3" name="3" class="btn btn-success" style="width:100px;"onClick="ClickNum(this.id)" />
             </td>
             <td rowspan="2">
-               <button value="maker" id="maker" name="maker" style="width:100px; height:80px;"class="btn btn-outline-dark" onClick="alert('이수진\n정한결\n최동오');">Maker</button>
+               <button value="maker" id="maker" name="maker" style="width:100px; height:80px;"class="btn btn-outline-dark" onClick="alert('만든이 : \n이수진 정한결 최동오');">Maker</button>
             </td>
          </tr>
       </table>
