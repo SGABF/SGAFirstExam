@@ -19,7 +19,7 @@
 </br></hr></br></hr>
  <div class="container-fluid" style=" text-align: center;" >
 	<form  action="${pageContext.request.contextPath}/Search/searchBarAction.jsp" method="POST"> 
-		<input  size=35  "text" class="btn btn-outline-primary btn-lg" id="searchBar" name="searchBar" aria-label="Search" placeholder="Search" > 
+		<input  size=35 class="btn btn-outline-primary btn-lg" id="searchBar" name="searchBar" aria-label="Search" placeholder="Search" > 
 	
 		</br></hr></br></hr>
 		<button type="radio" class="btn btn-success" value="naver" id="searchEngine" name="searchEngine" >Naver</button>
