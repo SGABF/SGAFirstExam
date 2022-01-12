@@ -38,32 +38,41 @@
 	}
 
 	//더하기 빼기
-	function add() {
-		if (check == 0) {
-			var tmp = document.getElementById("heightbar").value;
-			tmp++;
-			document.getElementById("heightbar").value = tmp;
+    function add() { 
+        if (check == 0) { // 신장 300 이상을 예외
+            var tmp = document.getElementById("heightbar").value;
+                tmp++;
+                document.getElementById("heightbar").value = tmp;
+        }else{ // 체중 300 이상을 예외
+            var tmp = document.getElementById("weightbar").value;
+            tmp++;
+            document.getElementById("weightbar").value = tmp;
+        }
+    }
 
-		} else {
-			var tmp = document.getElementById("weightbar").value;
-			tmp++;
+    function minus() { 
+        if (check == 0) { // 신장 음수 값 예외처리 
+           	//    value=("0");
+//            }else{
+	            var tmp = document.getElementById("heightbar").value;
+             if(tmp==null || tmp.length<=0 || tmp==0){
+                alert("잘못된 값을 입력하셨습니다.");
+             }else{
+            	 tmp--;
+	            	document.getElementById("heightbar").value = tmp;
+             }
+           
+        } else { // 체중 음수값 예외처리  10kg 미만
+            var tmp = document.getElementById("weightbar").value;
+             if(tmp==null || tmp.length<=0 || tmp==0){
+                alert("잘못된 값을 입력하셨습니다.");
+             }else{
+            tmp--;
+            document.getElementById("weightbar").value = tmp;
+          } 
+       }
 
-			document.getElementById("weightbar").value = tmp;
-		}
-	}
-
-	function minus() {
-		if (check == 0) {
-			var tmp = document.getElementById("heightbar").value;
-			tmp--;
-			document.getElementById("heightbar").value = tmp;
-		} else {
-			var tmp = document.getElementById("weightbar").value;
-			tmp--;
-			document.getElementById("weightbar").value = tmp;
-		}
-
-	}
+    }
 
 	//신장과 체중 버튼 위치가 계속 변경되는 스크립트
 	function ChangeMode() {
