@@ -104,7 +104,7 @@
 	//한글자씩 지우기
 		$(function () {
 			$("#remove").click(function(){
-				if(document.getElementById("heightbar")){
+				if(check==0){
 					var value = $("#heightbar").val();
 						if(value!=null && value.length>0){
 				// 원본에서 맨뒤의 1글자를 제하고 잘라낸다.
@@ -112,19 +112,17 @@
 				// 그 값으로 내용을 변경한다.
 						$("#heightbar").val(value);
 					}
-					if(document.getElementById("weightbar")){
+				}else{
 						var value = $("#weightbar").val();
 							if(value!=null && value.length>0){
 						// 원본에서 맨뒤의 1글자를 제하고 잘라낸다.
 							value = value.substring(0, value.length-1);
 						// 그 값으로 내용을 변경한다.
 							$("#weightbar").val(value);
-					
-						
+							
+						}
 					}
-				}
-			}
-		});
+			});
 	});
 	
 		
@@ -161,9 +159,9 @@
 			<tr>
 
 				<td colspan="2"><input type="button" value="전체 삭제" id="c" name="c"
-					onClick="Clear()" class="btn btn-outline-dark" /></td>
+					onClick="Clear()" class="btn btn-outline-dark" style="width:250px;" /></td>
 				<td colspan="2"><input type="button" value="타겟 변경" id="target"
-					name="target" onclick="ChangeMode()" class="btn btn-outline-dark" /></td>
+					name="target" onclick="ChangeMode()" class="btn btn-outline-dark" style="width:250px;" /></td>
 
 
 			</tr>
