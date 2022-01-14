@@ -9,6 +9,6 @@
 <body>
 	<jsp:include page="./Search/SearchBar.jsp"></jsp:include>
 	<jsp:include page="./Calendar/Calendar.jsp"></jsp:include>
-	<jsp:include page="./Calc/Calc.jsp"></jsp:include>
+	<jsp:include page="./Calc/calc.jsp"></jsp:include>
 </body>
 </html>
