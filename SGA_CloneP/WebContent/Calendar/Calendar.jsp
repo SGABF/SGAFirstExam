@@ -171,7 +171,6 @@ table.table2 {
 			%>
 
 		</tr>
-		<form method="POST" action="04_ItemWrite.jsp">
 	</table>
 	<table class="table2">
 		<thead>
