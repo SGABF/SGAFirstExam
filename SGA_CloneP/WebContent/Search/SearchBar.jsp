@@ -22,11 +22,11 @@
 		<input  size=35 class="btn btn-outline-primary btn-lg" id="searchBar" name="searchBar" aria-label="Search" placeholder="Search" > 
 	
 		</br></hr></br></hr>
-		<button type="radio" class="btn btn-outline-success" value="naver" id="searchEngine" name="searchEngine" ><img src="Naver.png"></button>
+		<button type="radio" class="btn btn-outline-success" value="naver" id="searchEngine" name="searchEngine" ><img src="${pageContext.request.contextPath}/Search/Naver.png"></button>
 		
-		<button type="radio" class="btn btn-outline-info" value="daum" id="searchEngine" name="searchEngine" ><img src="Daum.png"></button>
+		<button type="radio" class="btn btn-outline-info" value="daum" id="searchEngine" name="searchEngine" ><img src="${pageContext.request.contextPath}/Search/Daum.png"></button>
 		
-		<button type="radio" class="btn btn-outline-primary" value="google" id="searchEngine" name="searchEngine"><img src="Google.png"></button>
+		<button type="radio" class="btn btn-outline-primary" value="google" id="searchEngine" name="searchEngine"><img src="${pageContext.request.contextPath}/Search/Google.png"></button>
 		
 </br></br></br></br>
 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">도움말</button>
