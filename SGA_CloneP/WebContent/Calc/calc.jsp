@@ -21,6 +21,8 @@ request.setCharacterEncoding("UTF-8");
 <title>Calc</title>
 <link href="style.css" rel="stylesheet">
 <style type="text/css">
+
+<!--테스트 -->
 #heightbar, #weightbar {
 	width: 200px;
 }
