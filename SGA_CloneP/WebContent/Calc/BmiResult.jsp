@@ -78,7 +78,7 @@ font-family: 'Gowun Batang', serif;
 	bmi :bmibmi %><br /> <hr /> -->
 	<hr />
 	BMI측정결과:신체질량지수(BMI)는 <%=result%>로 <%=result2%> 입니다.<br />
-	<button onclick="history.back()" class="btn btn-success btn-lg">Back</button>
+	<button onclick="history.back()" class="btn btn-success btn-lg">이전 페이지</button>
 	<br />
 
 	<%-- 	getClass : <%=vo.getClass() %> <br /> --%>
